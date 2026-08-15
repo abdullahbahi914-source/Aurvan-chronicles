@@ -1,0 +1,37 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#eee2ca;--muted:#b8a98f;--gold:#c7a76b;--dark:#17130f;--paper:#3d3428}
+html{scroll-behavior:smooth}
+body{background:#17130f;color:var(--ink);font-family:Inter,sans-serif;line-height:1.9;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+#progress{position:fixed;z-index:1000;top:0;left:0;width:0;height:3px;background:#d4b16e;box-shadow:0 0 14px #d4b16e}
+.hero{min-height:100svh;position:relative;display:grid;place-items:center;text-align:center;overflow:hidden;background:radial-gradient(circle at 50% 44%,#735c3d 0,#34291d 34%,#15120f 78%)}
+.map-lines{position:absolute;inset:-10%;opacity:.18;background-image:linear-gradient(27deg,transparent 47%,#d0b37d 48%,transparent 49%),linear-gradient(155deg,transparent 48%,#d0b37d 49%,transparent 50%),radial-gradient(ellipse at 30% 60%,transparent 0 18%,#d0b37d 18.3% 18.7%,transparent 19%);background-size:180px 160px,230px 210px,100% 100%;transform:rotate(-7deg) scale(1.2);animation:mapMove 22s linear infinite}
+.grain{position:absolute;inset:0;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E")}
+.topbar{position:absolute;top:0;left:0;right:0;padding:25px 5vw;display:flex;justify-content:space-between;align-items:center;z-index:3;border-bottom:1px solid #ffffff12}
+.brand{font:600 15px Cinzel;letter-spacing:4px}.brand span{font:400 9px Inter;letter-spacing:2px;color:#b99b65;margin-left:8px}
+.language-btn,.text-btn{background:transparent;border:1px solid #d3b77a55;padding:9px 15px;font:500 11px Cinzel;letter-spacing:2px}
+.hero-inner{position:relative;z-index:2;padding:70px 22px;max-width:1000px}
+.sun-symbol{color:#d2ae6d;font-size:34px;margin-bottom:20px}
+.eyebrow{font:600 11px Cinzel;letter-spacing:5px;color:#d0ad6b}
+.hero h1{font:600 clamp(3.2rem,9vw,8.5rem)/.92 Cinzel;color:#eee5d4;letter-spacing:2px;text-shadow:0 10px 50px #0009}
+.hero h1 em{font-style:normal;color:#c7a76b}
+.hero-sub{max-width:650px;margin:30px auto 0;color:#c7baa5;font:300 clamp(15px,2vw,19px)/1.7 Inter}
+.primary-btn{margin-top:45px;padding:15px 25px;border:1px solid #d1ad6a88;background:#201a13aa;font:600 11px Cinzel;letter-spacing:3px;transition:.3s}
+.primary-btn:hover,.language-btn:hover,.text-btn:hover{background:#d1ad6a18;border-color:#d1ad6a}
+.scroll-hint{margin-top:55px;color:#8f806b;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.intro{padding:150px 7vw;background:linear-gradient(135deg,#514431,#3a3128)}
+.intro-copy{max-width:900px;margin:auto}.intro h2,.section-head h2{font:500 clamp(2.3rem,5vw,4.6rem)/1.1 Cinzel;margin:18px 0 28px;color:#f0e4cf}.intro-copy>p:not(.eyebrow){color:#d0c3ad;max-width:760px;font-size:17px}
+.family-markers{display:flex;gap:12px;flex-wrap:wrap;margin-top:45px}.family-markers span{padding:9px 15px;border:1px solid #d4b27635;color:#c9ad78;font:500 10px Cinzel;letter-spacing:3px}
+.chapters{padding:130px 6vw;background:#28231e}
+.section-head{text-align:center;max-width:800px;margin:auto}.section-head>p:last-child{color:#9e927f;margin-top:10px}
+.chapter-grid{max-width:1250px;margin:70px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d0b37d18}
+.card{min-height:300px;padding:32px;position:relative;display:flex;flex-direction:column;justify-content:space-between;background:var(--card);transition:.35s;overflow:hidden}
+.card:before{content:"";position:absolute;width:150px;height:150px;border:1px solid #ffffff16;border-radius:50%;right:-55px;top:-55px}.card:hover{transform:translateY(-6px);filter:brightness(1.08)}
+.card-num{font:600 10px Cinzel;letter-spacing:4px;color:#d3ae6c}.card h3{font:500 30px Cinzel;margin:12px 0}.card p{color:#b9ac97;font-size:13px}.card-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:30px}.card-read{font:600 10px Cinzel;letter-spacing:2px;color:#d3b276}
+.reader{padding:90px 7vw 130px;background:#3b3228;min-height:100vh}.hidden{display:none!important}.reader-head{max-width:900px;margin:auto;display:flex;gap:40px;align-items:start}.reader-head>div{flex:1}.reader-head h2{font:500 clamp(2.4rem,6vw,5rem)/1.05 Cinzel;margin:10px 0;color:#f0e4d0}.reader-head p:last-child{font-size:11px;letter-spacing:3px;color:#a99b84}.reading-progress{max-width:900px;height:2px;background:#ffffff18;margin:35px auto 65px}.reading-progress span{display:block;width:0;height:100%;background:#d0ad6a;transition:width .1s}
+.story{max-width:800px;margin:auto}.story p{font:300 17px/2 Inter;color:#dfd2bd;margin:0 0 28px}.story p:first-child:first-letter{float:left;font:500 70px/.75 Cinzel;color:#d0aa66;padding:9px 9px 0 0}.story .scene-break{text-align:center;color:#c4a46c;font-size:20px;letter-spacing:8px;margin:45px 0}.story h3{font:500 25px Cinzel;color:#e8dac0;margin:45px 0 20px}
+.episode-nav{max-width:900px;margin:80px auto 0;display:flex;justify-content:space-between;gap:15px}.nav-btn{background:#211b15;border:1px solid #d0ad6a44;padding:13px 18px;font:600 10px Cinzel;letter-spacing:2px}.nav-btn:disabled{opacity:.25;cursor:not-allowed}.completion{max-width:900px;margin:25px auto 0;text-align:center;color:#a89880;font-size:11px;letter-spacing:2px}
+footer{padding:55px 20px;text-align:center;background:#11100e;color:#a99470;font:500 11px Cinzel;letter-spacing:4px}footer span{display:block;margin-top:10px;color:#5e574d;font:400 9px Inter;letter-spacing:2px}
+@keyframes mapMove{from{transform:rotate(-7deg) scale(1.2) translate(0,0)}to{transform:rotate(-7deg) scale(1.2) translate(-80px,40px)}}
+@media(max-width:900px){.chapter-grid{grid-template-columns:repeat(2,1fr)}.reader-head{gap:20px}}
+@media(max-width:620px){.topbar{padding:20px}.brand{font-size:11px;letter-spacing:3px}.hero h1{font-size:3.1rem}.hero-sub{font-size:14px}.intro,.chapters,.reader{padding-left:22px;padding-right:22px}.intro{padding-top:100px;padding-bottom:100px}.chapters{padding-top:100px;padding-bottom:100px}.chapter-grid{grid-template-columns:1fr;margin-top:45px}.card{min-height:260px}.reader-head{display:block}.reader-head .text-btn{margin-bottom:45px}.story p{font-size:15px;line-height:1.95}.episode-nav{margin-top:55px}.nav-btn{font-size:9px;padding:11px}.language-btn{font-size:9px;padding:8px 10px}}

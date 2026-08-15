@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a1510">
+<meta name="description" content="3000 BC Survival: The Auran Chronicles">
+<title>3000 BC Survival | The Auran Chronicles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress"></div>
+
+<header class="hero">
+  <div class="map-lines"></div>
+  <div class="grain"></div>
+  <nav class="topbar">
+    <div class="brand">AURAN <span>3000 BC</span></div>
+    <button id="languageToggle" class="language-btn" aria-label="Change language">ENGLISH</button>
+  </nav>
+  <div class="hero-inner">
+    <div class="sun-symbol">◉</div>
+    <p class="eyebrow" data-i18n="eyebrow">A SURVIVAL CHRONICLE</p>
+    <h1>THE AURAN<br><em>CHRONICLES</em></h1>
+    <p class="hero-sub" data-i18n="heroSub">A family. A forgotten valley. A world that wants them dead.</p>
+    <button id="continueBtn" class="primary-btn" data-i18n="continue">CONTINUE THE CHRONICLE</button>
+    <p class="scroll-hint" data-i18n="scroll">Scroll to enter Auran</p>
+  </div>
+</header>
+
+<main>
+  <section class="intro">
+    <div class="intro-copy">
+      <p class="eyebrow" data-i18n="introEyebrow">THE YEAR IS 3000 BC</p>
+      <h2 data-i18n="introTitle">Before kingdoms had borders, survival had a price.</h2>
+      <p data-i18n="introText">Auran is a land of rivers, high grass, stone ridges and hungry winters. Families hunt together, trade by firelight and sleep with weapons within reach. Beyond their valleys move rival clans, predators and men who have learned that fear is a useful weapon.</p>
+      <div class="family-markers"><span>RAAN</span><span>BENNA</span><span>ARAN</span><span>KIAN</span></div>
+    </div>
+  </section>
+
+  <section class="chapters" id="chapters">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="chaptersEyebrow">THE FIRST SEASON</p>
+      <h2 data-i18n="chaptersTitle">Twelve nights. One family.</h2>
+      <p data-i18n="chaptersText">Read in order. Every episode changes the road ahead.</p>
+    </div>
+    <div id="chapterGrid" class="chapter-grid"></div>
+  </section>
+
+  <section id="reader" class="reader hidden">
+    <div class="reader-head">
+      <button id="backBtn" class="text-btn">← <span data-i18n="chapters">CHAPTERS</span></button>
+      <div>
+        <p id="readerNumber" class="eyebrow"></p>
+        <h2 id="readerTitle"></h2>
+        <p id="readerMeta"></p>
+      </div>
+    </div>
+    <div class="reading-progress"><span id="episodeProgress"></span></div>
+    <article id="story" class="story"></article>
+    <div class="episode-nav">
+      <button id="prevBtn" class="nav-btn">← <span data-i18n="previous">PREVIOUS</span></button>
+      <button id="nextBtn" class="nav-btn"><span data-i18n="next">NEXT</span> →</button>
+    </div>
+    <div id="completion" class="completion"></div>
+  </section>
+</main>
+
+<footer>
+  <strong>THE AURAN CHRONICLES</strong>
+  <span>SEASON I · 3000 BC</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
